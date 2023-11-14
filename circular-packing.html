@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Life</title>
+    <title>Visualización de Dinero por País</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #14FFB0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #000000;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body bgcolor="#14FFB0">
-    <canvas id="myCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
-    <a href="page 1.html">Collision game</a>
-    <a href="/chess/chess.html">Chess</a>
-    <a href="/ExtendedEssay/EE.html">ExtendedEssay</a>
-    <a href="/Pong/pong.html">Pong</a>
+<body>
+    <div class="container">
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+    </div>
 
+    <div class="menu">
+        <a href="page1.html">Collision Game</a>
+        <a href="/chess/chess.html">Chess</a>
+        <a href="/ExtendedEssay/EE.html">Extended Essay</a>
+        <a href="/Pong/pong.html">Pong</a>
+    </div>
 
+    <div class="flourish-embed flourish-hierarchy" data-src="visualisation/15735471"></div>
+
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
 </body>
-<div class="flourish-embed flourish-hierarchy" data-src="visualisation/15735471"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </html>
