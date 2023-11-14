@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución de la energía solar</title>
+</head>
+<body>
+
+    <header>
+        <h1>Distribución de la energía solar</h1>
+    </header>
+
+    <section>
+        <article>
+            <p>El siguiente gráfico muestra información de la distribución de la energía solar por países.</p>
+        </article>
+    </section>
+    
+    <section>
+        
+        <h2>Recursos solares repartidos en el mundo</h2>
+
+        <div id="html-embed"></div>
+
+        <div class="flourish-embed flourish-hierarchy" data-src="visualisation/15735471" style="width: 700px; height: 1000px; max-width: 100%;">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+
+
+    </section>
+
+    <!-- Código HTML a Embeber -->
+    <script>
+        document.getElementById('html-embed').innerHTML = '<p>El siguiente gráfico de tipo circular packing describe estimaciones de forma jerárquica el potencial de energía solar basadas en datos por países y continenetes, basado en datos del Laboratorio Nacional de Energías Renovables. En concreto, se utilizaron datos de la Base de Datos de Meteorología y Energía Solar de la NASA. El tamaño de los circulos está determinado por la cantidad de energía solar potencial que podría generar cada país por año, expresado en millones de MWh. El conjunto de datos se encuentra disponible en:  </p>';
+    </script>
+
+</body>
+</html>
