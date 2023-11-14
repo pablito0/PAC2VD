@@ -1,0 +1,74 @@
+---
+title: "Plots"
+output: html_document
+date: "2023-11-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Linear Dendogram
+
+
+Origen de datos: https://www.kaggle.com/datasets/aramacus/usa-public-companies
+Fuentes de ayuda: https://r-graph-gallery.com/336-interactive-dendrogram-with-collapsibletree.html
+
+```{r}
+# libraries
+library(htmlwidgets)
+library(networkD3)
+library(ggraph)
+library(igraph)
+library(tidyverse)
+library(dendextend)
+library(colormap)
+library(kableExtra)
+library(dplyr)
+
+library(collapsibleTree) 
+
+data <- read.csv("US_stocks.csv", stringsAsFactors = FALSE, sep = ",")
+
+# Represent this tree:
+p <- collapsibleTree( data, c("Sector", "Industry", "Sub.Industry", "Company.Name"), nodeSize = "leafCount")
+p
+
+# Plot
+saveWidget(p, file="linearDendogram.html")
+```
+
+
+
+## Convex Hull
+
+Origen de datos: https://www.kaggle.com/datasets/aerodinamicc/earthquakes-in-japan 
+
+```{r}
+# Generar datos ficticios para la distribución de espacios en la ciudad
+set.seed(123)
+
+
+data <- read.csv("Japan earthquakes 2001 - 2018.csv", sep = ",")
+
+# Filtramos las columnas que nos interesan
+data <- data[, 2:3]
+
+hull_points <- chull(data)
+hull_points <- c(hull_points, hull_points[1])
+
+par(mfrow = c(1, 2))
+
+# Infografía
+library(ggplot2)
+ggplot(data, aes(x = longitude, y = latitude)) +
+  geom_point(alpha = 0.5) +
+  geom_polygon(data = data[hull_points, ], aes(x = longitude, y = latitude), fill = "skyblue", alpha = 0.2) +
+  labs(title = "Distribución Geografica Terremotos en Japón", subtitle = "Terremotos identificados en Japón en el período 2001-2018")
+
+
+```
+
+
+
+```
