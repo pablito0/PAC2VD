@@ -1,19 +1,47 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Life</title>
+    <title>Título de tu Página</title>
 </head>
-<body bgcolor="#14FFB0">
-    <canvas id="myCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
-    <a href="page 1.html">Collision game</a>
-    <a href="/chess/chess.html">Chess</a>
-    <a href="/ExtendedEssay/EE.html">ExtendedEssay</a>
-    <a href="/Pong/pong.html">Pong</a>
+<body>
 
+    <header>
+        <h1>Título Principal</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Subtítulo</h2>
+            <p>Texto de ejemplo. Puedes escribir aquí cualquier contenido que desees.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Área para Embeber HTML</h2>
+        <!-- Utilizando la etiqueta <iframe> para embeber otro archivo HTML -->
+        <iframe src="linearDendogram.html" width="600" height="400" title="Contenido Embebido"></iframe>
+    </section>
+    
+    <section>
+        
+        <h2>Área para Insertar o Embeber HTML Adicional</h2>
+        <div id="html-embed"></div>
+        <div class="flourish-embed flourish-hierarchy" data-src="visualisation/15735471"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </section>
+
+    <footer>
+        <p>© 2023 Tu Empresa</p>
+    </footer>
+
+    <!-- Código HTML a Embeber -->
+    <script>
+        document.getElementById('html-embed').innerHTML = '<p>Este es un código HTML embebido.</p>';
+    </script>
 
 </body>
-<div class="flourish-embed flourish-hierarchy" data-src="visualisation/15735471"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </html>
